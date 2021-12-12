@@ -21,9 +21,22 @@ some_data = [
 ]
 
 @app.route("/")
-@app.route("/home")
 def home():
-    return render_template('home.html', data=some_data)
+    return render_template('index.html')
+
+@app.route("/users")
+def users():
+    return render_template('users.html', data=some_data)
+
+
+@app.route("/employees")
+def employees():
+    return render_template('employees.html', data=some_data)
+
+
+@app.route("/departments")
+def departments():
+    return render_template('departments.html', data=some_data)
 
 
 @app.route("/about")

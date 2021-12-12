@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block title %}
+    Users
+{% endblock %}
+{% block body%}
+    {% for item in data%}
+    <h2>{{item.title}} created by {{item.author}}</h2>
+    <p>{{item.body}}</p>
+    {%endfor%}
+{% endblock body%}

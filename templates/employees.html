@@ -1,13 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home</title>
-</head>
-<body>
+{% extends "layout.html" %}
+{% block title %}
+    Employees
+{% endblock %}
+{% block body%}
     {% for item in data%}
     <h2>{{item.title}} created by {{item.author}}</h2>
     <p>{{item.body}}</p>
     {%endfor%}
-</body>
-</html>
+{% endblock body%}
